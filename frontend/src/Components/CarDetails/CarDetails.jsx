@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { getparticularCar } from "../../Actions/carActions";
+import { ClimbingBoxLoader } from "react-spinners";
 import Navbar from "../Navbar/Navbar";
 import "./CarDetails.css";
 import carimg from "../../images/car-img.png";
@@ -109,7 +110,17 @@ const CarDetails = () => {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <div style={{ height: "100vh", backgroundColor: "black" }}>
+        {" "}
+        <ClimbingBoxLoader
+          color="#36d7b7"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        />
+      </div>
       ) : (
         <div>
           <div style={{ backgroundColor: "#222831" }}>

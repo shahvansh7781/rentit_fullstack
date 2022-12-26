@@ -37,7 +37,7 @@ const Cars = () => {
   useEffect(() => {
     setTimeout(() => {
       setloading(false);
-    }, 4000);
+    }, 3000);
   }, []);
 
   const [checkedItem, setCheckedItem] = useState([]);
@@ -78,12 +78,10 @@ const Cars = () => {
   });
   return (
     <>
-    <div style={{ backgroundColor: "#222831"}}>
-        <Navbar />
-      </div>
+    
      
       {loading ? (
-        <div style={{ height: "100vh", backgroundColor: "#222831" }}>
+        <div style={{ height: "100vh", backgroundColor: "black" }}>
         {" "}
         <ClimbingBoxLoader
           color="#36d7b7"
@@ -99,6 +97,9 @@ const Cars = () => {
           {/* <div>
             <Navbar />
           </div> */}
+          <div style={{ backgroundColor: "#222831"}}>
+        <Navbar />
+      </div>
           <div className="car-container">
             {/* <FilterBox /> */}
             <div className="FilterBox">
